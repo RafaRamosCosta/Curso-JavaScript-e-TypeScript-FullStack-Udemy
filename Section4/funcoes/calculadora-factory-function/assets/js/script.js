@@ -32,6 +32,7 @@ function criaCalculadora() {
     // função para passar os números selecionados para o input
     btnParaDisplay(valor) {
       this.display.value += valor;
+      this.display.focus();
     },
     // função para limpar o input
     clearDisplay() {
