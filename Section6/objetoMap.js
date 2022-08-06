@@ -11,6 +11,9 @@ const pessoas = [
 //     novasPessoas[id] = { ...pessoa };
 // }
 
+// Um objeto Map itera seus elementos na ordem da inserção 
+// - um loop for...of retorna um array de [key, value] para cada iteração
+
 // dessa forma a orderm é mantida
 const novasPessoas = new Map();
 for (const pessoa of pessoas) {
