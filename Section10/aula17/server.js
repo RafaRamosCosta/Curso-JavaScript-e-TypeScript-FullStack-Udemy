@@ -16,6 +16,10 @@ const {
 
 app.use(helmet());
 
+// realiza o parse pra json na aplicação
+app.use(express.json());
+
+
 // método para acessar o body da requisição
 app.use(express.urlencoded({ extended: true }));
 
