@@ -1,0 +1,18 @@
+<%- include('includes/head'); %>
+  <body>
+    <section class="container">
+      <h1>
+        <% if (typeof titulo !== 'undefined') { %> <%= titulo %> <% } else { %>
+        O título não foi enviado! <% } %>
+        <!-- Tag ejs com sinal de = não escapa caracteres, com sinal de - escapa caracteres -->
+      </h1>
+      <h2><% numeros.forEach(num => {%> <%= num %> <% }) %></h2>
+      <form action="/" method="POST">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <label>Cliente</label>
+        <input type="text" name="cliente" />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+  </body>
+</html>
